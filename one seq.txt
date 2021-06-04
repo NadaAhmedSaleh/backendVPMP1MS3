@@ -1,0 +1,9 @@
+whenflagclicked#
+forever#
+F[#
+if#
+IF[#
+touchingobject;[Ben]#
+broadcast;[ballhit]#
+IF]#
+F]#

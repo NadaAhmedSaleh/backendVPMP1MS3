@@ -1,0 +1,27 @@
+{
+  "name": "my-app",
+  "version": "1.0.0",
+  "description": "\"# bachelorBackend\"",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NadaHamdyMegahed/bachelorBackend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NadaHamdyMegahed/bachelorBackend/issues"
+  },
+  "homepage": "https://github.com/NadaHamdyMegahed/bachelorBackend#readme",
+  "dependencies": {
+    "cmd-node": "0.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "https-localhost": "^4.6.0",
+    "ngrok": "^3.2.7",
+    "node-cmd": "^3.0.0"
+  }
+}

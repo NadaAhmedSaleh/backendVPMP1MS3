@@ -1,0 +1,118 @@
+*****************************#
+New Sprite:Ballerina#
+-------------(New Sequential Blocks)----------------#
+whenflagclicked#
+forever#
+F[#
+repeat;10#
+R[#
+nextcostume#
+wait;0.2#
+R]#
+wait;2#
+F]#
+-------------(New Sequential Blocks)----------------#
+whenbroadcastreceived;[mshgoal]#
+sayforsecs;[opps,1.5]#
+-------------(New Sequential Blocks)----------------#
+whenbroadcastreceived;[lsa]#
+say;[gooo ben]#
+*****************************#
+New Sprite:Ben#
+-------------(New Sequential Blocks)----------------#
+whenkeypressed;[up arrow]#
+pointindirection;[90]#
+switchcostumeto;[ben-a]#
+gotoxy;[-156,-18]#
+repeat_until#
+RU[#
+touchingobject;[Soccer Ball]#
+movesteps;[10]#
+RU]#
+turnleft;[30]#
+nextcostume#
+wait;1.5#
+gotoxy;[-156,-18]#
+pointindirection;[90]#
+switchcostumeto;[ben-d]#
+-------------(New Sequential Blocks)----------------#
+whenflagclicked#
+think;[Hmm...]#
+-------------(New Sequential Blocks)----------------#
+whenkeypressed;[up arrow]#
+wait;0.2#
+thinkforsecs;[yarb goal,1.5]#
+think;[hmmm]#
+*****************************#
+New Sprite:Soccer Ball#
+-------------(New Sequential Blocks)----------------#
+whenkeypressed;[up arrow]#
+pointindirection;[90]#
+setx;[3]#
+sety;[-77]#
+wait_until#
+WU[#
+touchingobject;[Ben]#
+WU]#
+broadcast;[ballhit]#
+repeat_until#
+RU[#
+touchingobject;[Goalie]#
+changexby;[5]#
+changeyby;[1]#
+RU]#
+wait;1#
+setx;[3]#
+sety;[-77]#
+*****************************#
+New Sprite:Goalie#
+-------------(New Sequential Blocks)----------------#
+whenbroadcastreceived;[ballhit]#
+nextcostume#
+wait;0.2#
+-------------(New Sequential Blocks)----------------#
+whenkeypressed;[up arrow]#
+repeat_until#
+RU[#
+touchingobject;[Soccer Ball]#
+broadcast;[lsa]#
+RU]#
+broadcast;[mshgoal]#
+*****************************#
+New Sprite:Ballerina2#
+-------------(New Sequential Blocks)----------------#
+whenbroadcastreceived;[mshgoal]#
+sayforsecs;[opps,1.5]#
+-------------(New Sequential Blocks)----------------#
+whenflagclicked#
+forever#
+F[#
+repeat;10#
+R[#
+nextcostume#
+wait;0.2#
+R]#
+wait;2#
+F]#
+-------------(New Sequential Blocks)----------------#
+whenbroadcastreceived;[lsa]#
+say;[gooo ben]#
+*****************************#
+New Sprite:Ballerina3#
+-------------(New Sequential Blocks)----------------#
+whenflagclicked#
+forever#
+F[#
+repeat;10#
+R[#
+nextcostume#
+wait;0.2#
+R]#
+wait;2#
+F]#
+-------------(New Sequential Blocks)----------------#
+whenbroadcastreceived;[mshgoal]#
+sayforsecs;[opps,1.5]#
+-------------(New Sequential Blocks)----------------#
+whenbroadcastreceived;[lsa]#
+say;[gooo ben]#
