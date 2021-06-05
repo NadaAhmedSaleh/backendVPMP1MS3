@@ -157,6 +157,8 @@ function returnOneSequential(arr){
       var newArr = ["if"]
       var startIndex = i+2;
       var endIndex = arr.indexOf("IF]")
+      if(endIndex==-1 )
+       endIndex = arr.indexOf("IF]#")
       var subArr = arr.slice(startIndex,endIndex)
       newArr.push(returnOneSequential(subArr))
       finalArr.push(newArr)
@@ -169,6 +171,8 @@ function returnOneSequential(arr){
       var newArr = ["wait_until"]
       var startIndex = i+2;
       var endIndex = arr.indexOf("WU]")
+      if(endIndex==-1 )
+       endIndex = arr.indexOf("WU]#")
       var subArr = arr.slice(startIndex,endIndex)
       newArr.push(returnOneSequential(subArr))
       finalArr.push(newArr)
@@ -181,6 +185,8 @@ function returnOneSequential(arr){
       var newArr = ["repeat_until"]
       var startIndex = i+2;
       var endIndex = arr.indexOf("RU]")
+      if(endIndex==-1 )
+       endIndex = arr.indexOf("RU]#")
       var subArr = arr.slice(startIndex,endIndex)
       newArr.push(returnOneSequential(subArr))
       finalArr.push(newArr)
@@ -194,6 +200,8 @@ function returnOneSequential(arr){
       var newArr = ["if_else"]
       var startIndex = i+2;
       var endIndex = arr.indexOf("IF-E]")
+      if(endIndex==-1 )
+       endIndex = arr.indexOf("IF-E]#")
       var subArr = arr.slice(startIndex,endIndex)
       newArr.push(returnOneSequential(subArr))
       finalArr.push(newArr)
@@ -203,28 +211,32 @@ function returnOneSequential(arr){
 
     }
      else if (arr[i].split(";")[0]=="forever"){
-       
+       console.log(arr)
       var newArr = ["forever"]
       var startIndex = i+2;
       var endIndex = arr.indexOf("F]")
+      if(endIndex==-1 )
+       endIndex = arr.indexOf("F]#")
       var subArr = arr.slice(startIndex,endIndex)
       newArr.push(returnOneSequential(subArr))
       finalArr.push(newArr)
       i = endIndex
-      console.log("forever: ")
-      console.log(newArr)
+      //console.log("forever: ",i)
+      //console.log(newArr)
     }
     else if (arr[i].split(";")[0]=="repeat"){
       
       var newArr = arr[i].split(";")
       var startIndex = i+2;
       var endIndex = arr.indexOf("R]")
+      if(endIndex==-1 )
+       endIndex = arr.indexOf("R]#")
       var subArr = arr.slice(startIndex,endIndex)
       newArr.push(returnOneSequential(subArr))
       finalArr.push(newArr)
       i = endIndex
-      console.log("repeat")
-      console.log(newArr)
+     // console.log("repeat")
+     // console.log(newArr)
     }
     else if(arr[i]==""){
       finalArr= finalArr

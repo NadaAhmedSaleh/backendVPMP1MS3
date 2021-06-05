@@ -37,7 +37,12 @@ pointindirection;[90]#
 switchcostumeto;[ben-d]#
 -------------(New Sequential Blocks)----------------#
 whenflagclicked#
+if_else#
+IF-E[#
+touchingobject;[Soccer Ball]#
+thinkforsecs;[yarb goal,1.5]#
 think;[Hmm...]#
+IF-E]#
 -------------(New Sequential Blocks)----------------#
 whenkeypressed;[up arrow]#
 wait;0.2#
@@ -67,9 +72,12 @@ sety;[-77]#
 *****************************#
 New Sprite:Goalie#
 -------------(New Sequential Blocks)----------------#
-whenbroadcastreceived;[ballhit]#
+whenflagclicked#
+if#
+IF[#
+touchingobject;[Soccer Ball]#
 nextcostume#
-wait;0.2#
+IF]#
 -------------(New Sequential Blocks)----------------#
 whenkeypressed;[up arrow]#
 repeat_until#
@@ -78,9 +86,16 @@ touchingobject;[Soccer Ball]#
 broadcast;[lsa]#
 RU]#
 broadcast;[mshgoal]#
+-------------(New Sequential Blocks)----------------#
+whenbroadcastreceived;[ballhit]#
+nextcostume#
+wait;0.2#
 *****************************#
 New Sprite:Ballerina2#
 -------------(New Sequential Blocks)----------------#
+whenbroadcastreceived;[lsa]#
+say;[gooo ben]#
+-------------(New Sequential Blocks)----------------#
 whenbroadcastreceived;[mshgoal]#
 sayforsecs;[opps,1.5]#
 -------------(New Sequential Blocks)----------------#
@@ -94,12 +109,15 @@ wait;0.2#
 R]#
 wait;2#
 F]#
--------------(New Sequential Blocks)----------------#
-whenbroadcastreceived;[lsa]#
-say;[gooo ben]#
 *****************************#
 New Sprite:Ballerina3#
 -------------(New Sequential Blocks)----------------#
+whenbroadcastreceived;[lsa]#
+say;[gooo ben]#
+-------------(New Sequential Blocks)----------------#
+whenbroadcastreceived;[mshgoal]#
+sayforsecs;[opps,1.5]#
+-------------(New Sequential Blocks)----------------#
 whenflagclicked#
 forever#
 F[#
@@ -110,9 +128,3 @@ wait;0.2#
 R]#
 wait;2#
 F]#
--------------(New Sequential Blocks)----------------#
-whenbroadcastreceived;[mshgoal]#
-sayforsecs;[opps,1.5]#
--------------(New Sequential Blocks)----------------#
-whenbroadcastreceived;[lsa]#
-say;[gooo ben]#
